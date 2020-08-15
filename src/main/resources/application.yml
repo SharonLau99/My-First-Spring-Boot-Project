@@ -1,0 +1,51 @@
+person:
+    last-name: Hello
+    age: 18
+    boss: false
+    birth: 2017/12/12
+    maps: {k1: v1,k2: v2}
+    lists:
+        - lisi
+        - zhaoliu
+    dog:
+        name: 小狗
+        age: 12
+
+
+spring:
+    datasource:
+        username: root
+        password: 19960729
+        url: jdbc:mysql://116.85.70.47:3306/mybatis?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=FALSE
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+        #   数据源其他配置
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+        filters: stat,wall,log4j
+        maxPoolPreparedStatementPerConnectionSize: 20
+        useGlobalDataSourceStat: true
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    jpa:
+        hibernate:
+            #更新或者创建数据表
+            ddl-auto: update
+        #控制台显示sql
+        show-sql: true
+#        schema:
+#            - classpath:sql/department.sql
+#            - classpath:sql/employee.sql
+mybatis:
+    #如果开启了这个全局配置，mybatisconfig这个全局配置就失效了
+    #config-location: classpath:mybatis/mybatis-config.xml
+    mapper-locations: classpath:mybatis/mapper/*.xml

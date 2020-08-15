@@ -1,0 +1,54 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "org.sharon.springboot.bean.Person",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "org.sharon.springboot.config.DruidConfig",
+      "sourceMethod": "druid()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.sharon.springboot.bean.Person",
+      "defaultValue": false
+    },
+    {
+      "name": "person.dog",
+      "type": "org.sharon.springboot.bean.Dog",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "person.last-name",
+      "type": "java.lang.String",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    },
+    {
+      "name": "person.maps",
+      "type": "java.util.Map",
+      "sourceType": "org.sharon.springboot.bean.Person"
+    }
+  ],
+  "hints": []
+}
